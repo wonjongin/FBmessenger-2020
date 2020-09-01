@@ -18,6 +18,8 @@ function createWindow() {
     //frame: false,
     //titleBarStyle: "hidden",
     webPreferences: {
+      nodeIntegration: true,
+      webviewTag: true,
       preload: path.join(__dirname, "preload.js"),
     },
   });
