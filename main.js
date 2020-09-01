@@ -10,13 +10,14 @@ function createWindow() {
     height: 600,
     minWidth: 500,
     //frame: false,
+    //titleBarStyle: "hidden",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL("https://www.messenger.com");
+  mainWindow.loadURL("https://www.messenger.com/");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
