@@ -1,5 +1,5 @@
 # FBmessenger
-💬J ust unofficial Facebook Messenger client
+💬 Just unofficial Facebook Messenger client
 ## 🎁 Features
 This app has features which facebook messenger has. It is just unofficial Facebook Messenger client.
 
