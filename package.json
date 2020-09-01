@@ -1,0 +1,25 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "description": "Unofficial Facebook Messenger client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": {
+    "name": "Won Jongin",
+    "email": "teamforapplication@gmail.com",
+    "url": "http://nanobyte.iptime.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.1.0"
+  }
+}
