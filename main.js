@@ -1,13 +1,19 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const windowStateKeeper = require("electron-window-state");
 
 function createWindow() {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    //show: false,
-    width: 800,
-    height: 600,
+  let mainWindowStateKeeper = windowStateKeeper({
+    defaultWidth: 1000,
+    defaultHeight: 800,
+  });
+
+  win = new BrowserWindow({
+    x: mainWindowStateKeeper.x,
+    y: mainWindowStateKeeper.y,
+    width: mainWindowStateKeeper.width,
+    height: mainWindowStateKeeper.height,
     minWidth: 500,
     //frame: false,
     //titleBarStyle: "hidden",
@@ -15,12 +21,8 @@ function createWindow() {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-
-  // and load the index.html of the app.
-  mainWindow.loadURL("https://www.messenger.com/");
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindowStateKeeper.manage(win);
+  win.loadURL("https://www.messenger.com/");
 }
 
 // This method will be called when Electron has finished

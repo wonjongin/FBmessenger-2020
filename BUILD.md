@@ -1,7 +1,8 @@
-## 📦Pre requirements
+# Build yourself
+## 📦 Pre requirements
 This App is based on electron. So in order to build, you should have node.js. Download node.js is [here!](https://nodejs.org/) 
 
-## 🛠Build
+## 🛠 Build
 First, clone this project.
 Second, type this commands in project directory.
 ```
